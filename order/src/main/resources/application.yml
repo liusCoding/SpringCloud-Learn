@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: order
+    #连接数据库
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://120.79.185.188:3306/springcloud_sell?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+  jpa:
+    show-sql: true
+#注册到eureka服务中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8088

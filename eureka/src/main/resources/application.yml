@@ -5,12 +5,14 @@ eureka:
     register-with-eureka: false
   server:
     #eureka的自我保护
-    enable-self-preservation: false
+    enable-self-preservation: true
 
 spring:
   application:
     name: eureka
 
-
-server:
-  port: 8761
+#
+#server:
+#  port: 8761
+management:
+  context-path: /
