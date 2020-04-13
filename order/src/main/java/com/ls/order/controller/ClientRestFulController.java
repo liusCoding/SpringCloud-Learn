@@ -13,15 +13,17 @@ import org.springframework.web.client.RestTemplate;
  * @create: 2020-04-03 17:42
  **/
 @RestController
-public class ClientController {
+public class ClientRestFulController {
 
     @Autowired
     private LoadBalancerClient loadBalancerClient;
 
+
+
     @Autowired
     private RestTemplate restTemplate;
     @GetMapping("/getProductMsg")
-    public String getProductMsg(){
+    public String getProductMsgForRest(){
         //1.第一种方式(直接使用restTemplate,url写死)
 //        RestTemplate restTemplate = new RestTemplate();
 //        String msg = restTemplate.getForObject("http://localhost:8070/msg", String.class);
@@ -39,4 +41,7 @@ public class ClientController {
 
         return msg;
     }
+
+
+
 }
